@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <!-- Grundinställningar -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Typsnitt -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <!-- För snabbare laddning av Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Sidtitel -->
+    <title>Josephine Mörner | UX Designer</title>
+
+    <!-- Egen CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================================
+         HEADER / NAVIGATION
+    ========================================== -->
+    <header class="topbar">
+      <div class="container nav">
+        <!-- Logotyp / namn -->
+        <a
+          class="brand"
+          href="#home"
+          style="font-size: 18px; font-weight: 800; letter-spacing: -0.02em;"
+        >
+          Josephine Mörner
+          <span style="font-weight: 700; color: #A855F7;">Portfolio</span>
+        </a>
+
+        <!-- Desktop-meny -->
+        <nav class="nav-links" aria-label="Huvudmeny">
+          <a href="#home">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Knapp + hamburgermeny -->
+        <div class="nav-cta">
+         
+
+          <button
+            class="burger"
+            id="burger"
+            aria-label="Öppna meny"
+            aria-expanded="false"
+          >
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobilmeny -->
+      <div class="container mobile-menu" id="mobileMenu" aria-label="Mobilmeny">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#what">What I do</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+    <main id="home" class="hero">
+      <div class="container hero-grid">
+        <!-- Vänster sida: text -->
+        <div>
+          <p class="kicker">Hi I am</p>
+          <p class="hero-name">Josephine Mörner</p>
+
+          <h1 class="hero-title">
+            <span class="ux">UX</span>
+            <span>Designer</span>
+          </h1>
+
+          <p class="hero-blurb">
+            <strong>AI Can Generate Designs. UX Makes Them Work.</strong><br />
+            I design user-centered and accessible digital products based on
+            research and real user needs.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn" href="#projects">View Projects</a>
+          </div>
+        </div>
+
+        <!-- Höger sida: profilbild -->
+        <aside class="hero-card" aria-label="Profilkort">
+          <div class="avatar-wrap">
+            <div class="avatar" aria-label="Profilbild">
+              <img src="Josephine.jpg" alt="Porträtt" />
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <!-- Vänster kolumn -->
+        <div class="about-left">
+          <h2 class="about-title-large">
+            About <span>me</span>
+          </h2>
+
+          <div class="about-skills">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">User Research</span>
+            <span class="skill-tag">Prototyping</span>
+            <span class="skill-tag">Accessibility</span>
+            <span class="skill-tag">Wireframing</span>
+            <span class="skill-tag">Usability Testing</span>
+          </div>
+        </div>
+
+        <!-- Höger kolumn -->
+        <div class="about-text-content">
+         <p>
+  As a Stockholm-based <strong>UX Designer</strong>, I recently completed my 
+  studies at <strong>Noroff School of Technology and Digital Media</strong>. 
+  <br />
+  During my time there, I’ve built a strong foundation in designing digital 
+  environments that are both inclusive and user-focused.
+</p>
+
+<p>
+  I believe that the best solutions come from a mix of deep user research and 
+  creative problem-solving. My goal is always to turn complicated data into 
+  seamless, everyday interactions.
+</p>
+
+<p>
+  With the experience of bringing digital products from the classroom into 
+  the professional world, I am now eager to tackle new challenges.
+</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         PROJECTS
+    ========================================== -->
+    <section id="projects" class="section">
+      <div class="container center">
+        <h2 class="section-title">Selected Projects</h2>
+        <h4>
+          A curated showcase of my work, focusing on user research,
+          problem-solving, and intuitive design.
+        </h4>
+
+        <!-- Filterknappar -->
+        <div class="filters">
+          <button class="btn pill active" data-filter="all">All</button>
+          <button class="btn pill" data-filter="web">Web</button>
+          <button class="btn pill" data-filter="apps">Apps</button>
+        </div>
+
+        <!-- Projekt-grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Projekt 1 -->
+          <article class="card project" data-tags="web">
+            <div class="thumb">
+              <img src="Ivrell.jpg" alt="Ivrell app preview" />
+              <span class="badge">Startup Launch</span>
+            </div>
+
+            <div class="content">
+              <h3
+                style="color: #000000 !important; font-weight: 700; margin-bottom: 8px;"
+              >
+                Ivrell Wallsten AB
+              </h3>
+
+              <p
+                style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+              >
+                End-to-end UX design for a consulting firm.
+              </p>
+
+              <div class="meta">
+                <a class="btn pill" href="iwab.html" style="padding: 8px 12px;">
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projekt 2 -->
+          <article class="card project" data-tags="apps">
+            <div class="thumb">
+              <img src="injury-app.png" alt="Preview of Injury App interface" />
+              <span class="badge">End-to-End Design</span>
+            </div>
+
+            <div class="content">
+              <h3
+                style="color: #000000 !important; font-weight: 700; margin-bottom: 8px;"
+              >
+                Injury App
+              </h3>
+
+              <p
+                style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+              >
+                Rehabilitation app prototype focused on clarity and progression.
+              </p>
+
+              <div class="meta">
+                <a class="btn pill" href="injury.html" style="padding: 8px 12px;">
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projekt 3 -->
+          <article class="card project" data-tags="apps">
+            <div class="thumb">
+              <img src="newmom.jpg" alt="Newmom App preview" />
+              <span class="badge">End-to-End Design</span>
+            </div>
+
+            <div class="content">
+              <h3>NewMom</h3>
+
+              <p
+                style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+              >
+                Support platform concept for postpartum health and well being.
+              </p>
+
+              <div class="meta">
+                <a class="btn pill" href="newmom.html" style="padding: 8px 12px;">
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         UX PROCESS
+    ========================================== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">My UX Process</h2>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-number">01</div>
+            <h3>Research</h3>
+            <p
+              style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+            >
+              Analyzing user needs and market trends to build a solid foundation.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">02</div>
+            <h3>Ideation</h3>
+            <p
+              style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+            >
+              Exploring ideas with sketches, user flows and wireframes
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">03</div>
+            <h3>Testing</h3>
+            <p
+              style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+            >
+              Testing prototypes with users and iterating on feedback.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">04</div>
+            <h3>Design</h3>
+            <p
+              style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+            >
+              Creating high-fidelity interfaces using design systems and WCAG
+              principles
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         SERVICES
+    ========================================== -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <h4>Ways I can help improve your digital product.</h4>
+
+        <div class="services">
+          <div class="service card">
+            <span class="material-symbols-outlined icon">draw</span>
+            <h3>UX & Product Design</h3>
+            <p
+              style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+            >
+              Design of user-friendly websites or apps from research and
+              wireframes to high-fidelity prototypes.
+            </p>
+          </div>
+
+          <div class="service card">
+            <span class="material-symbols-outlined icon">auto_fix_high</span>
+            <h3>Product Redesign</h3>
+            <p
+              style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+            >
+              Improving existing websites or apps by identifying usability
+              issues and creating better user experiences.
+            </p>
+          </div>
+
+          <div class="service card">
+            <span class="material-symbols-outlined icon">layers</span>
+            <h3>Prototyping</h3>
+            <p
+              style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+            >
+              Interactive prototypes that help visualize ideas, test concepts
+              and communicate design solutions.
+            </p>
+          </div>
+
+          <div class="service card">
+            <span class="material-symbols-outlined icon">visibility</span>
+            <h3>UX Review & Accessibility</h3>
+            <p
+              style="color: #334155 !important; font-size: 15px; line-height: 1.5;"
+            >
+              UX audits and accessibility reviews based on usability principles
+              and WCAG guidelines
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         TESTIMONIALS
+    ========================================== -->
+    <section id="testimonials" class="section" style="padding-top: 10px;">
+      <div class="container center">
+        <h2 class="section-title">What my clients say</h2>
+
+        <div class="testimonial-wrap" style="margin-top: 18px;">
+          <div class="card testimonial" id="testimonialCard" aria-live="polite">
+            <div class="t-avatar">
+              <img
+                id="tImg"
+                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=240&q=80"
+                alt="Kundporträtt"
+              />
+            </div>
+
+            <div>
+              <p class="quote" id="tQuote">
+                “Lorem ipsum dolor sit amet consectetur. In enim cursus odio
+                condimentum. Augue civit neque amet tellus orci adipiscing
+                massa. Quis commodo ultrices…”
+              </p>
+              <p class="t-name" id="tName">Hugo Wolfsten</p>
+              <p class="t-role" id="tRole">CEO — Iwaf Wolfsten AB</p>
+            </div>
+          </div>
+
+          <div class="dots" id="dots" aria-label="Välj testimonial"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Get in touch</h2>
+        <h4>
+          Need help with a project or have a question? I’ll get back to you
+          within 24 hours.
+        </h4>
+
+        <form
+          class="contact-form"
+          action="mailto:idaemmamaria0621@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <input
+            class="input"
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required
+          />
+          <button class="btn primary" type="submit">Get in touch</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <footer style="background-color: #f3efff !important; padding: 60px 0; margin: 0;">
+      <div class="container">
+        <div style="margin-bottom: 40px;">
+          <p
+            style="color: #000000 !important; font-size: 20px !important; font-weight: 500; margin-bottom: 20px; line-height: 1.4;"
+          >
+            I'm always open to new opportunities<br />
+            and collaborations.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a
+              href="mailto:josephine@joiweb.se"
+              style="color: #000000 !important; font-size: 24px !important; font-weight: 800; text-decoration: none;"
+            >
+              josephine@joiweb.se
+            </a>
+
+            <a
+              href="tel:+46738333572"
+              style="color: #000000 !important; font-size: 24px !important; font-weight: 800; text-decoration: none;"
+            >
+              +46 767 953 480
+            </a>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 60px;">
+          <a
+            href=https://se.linkedin.com/in/josephine-mörner-71b071236
+            target="_blank"
+            style="display: inline-block; background-color: #0077b5; color: #ffffff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px;"
+          >
+            LinkedIn
+          </a>
+        </div>
+
+        <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 20px;">
+          <p style="color: #000000; font-size: 14px; margin: 0;">
+            © 2026 Josephine Mörner
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================
+         JAVASCRIPT
+         Här ligger mobilmeny, projektfilter och testimonials
+    ========================================== -->
+    <script>
+      /* -----------------------------------------
+         MOBILMENY
+         Öppnar och stänger hamburgermenyn
+      ----------------------------------------- */
+      const burger = document.getElementById("burger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      burger?.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("show");
+        burger.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      /* Stänger mobilmenyn när man klickar på en länk */
+      mobileMenu?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          mobileMenu.classList.remove("show");
+          burger.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      /* -----------------------------------------
+         PROJEKTFILTER
+         Filtrerar projekt beroende på vald knapp
+      ----------------------------------------- */
+      const filterButtons = document.querySelectorAll("[data-filter]");
+      const projectCards = document.querySelectorAll(".project");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+
+          projectCards.forEach((card) => {
+            const tags = (card.getAttribute("data-tags") || "")
+              .split(",")
+              .map((t) => t.trim());
+
+            const show = filter === "all" || tags.includes(filter);
+            card.style.display = show ? "flex" : "none";
+          });
+        });
+      });
+
+      /* -----------------------------------------
+         TESTIMONIALS
+         Enkel slider för kundomdömen
+      ----------------------------------------- */
+      const testimonials = [
+        {
+          img: "Hugo.jpg",
+          quote:
+            "“Josephine helped me create a new professional website for my business and delivered a result I’m really happy with",
+          name: "Hugo Wallsten",
+          role: "CEO — Iwrell Wallsten AB",
+        },
+      ];
+
+      const tImg = document.getElementById("tImg");
+      const tQuote = document.getElementById("tQuote");
+      const tName = document.getElementById("tName");
+      const tRole = document.getElementById("tRole");
+      const dots = document.getElementById("dots");
+
+      let current = 0;
+
+      function renderDots() {
+        dots.innerHTML = "";
+
+        testimonials.forEach((_, i) => {
+          const d = document.createElement("button");
+          d.className = "dot" + (i === current ? " active" : "");
+          d.setAttribute("aria-label", "Testimonial " + (i + 1));
+
+          d.addEventListener("click", () => {
+            current = i;
+            renderTestimonial();
+          });
+
+          dots.appendChild(d);
+        });
+      }
+
+      function renderTestimonial() {
+        const t = testimonials[current];
+
+        tImg.src = t.img;
+        tQuote.textContent = t.quote.replaceAll("“", "").replaceAll("”", "");
+        tQuote.textContent = "“" + tQuote.textContent + "”";
+        tName.textContent = t.name;
+        tRole.textContent = t.role;
+
+        dots
+          .querySelectorAll(".dot")
+          .forEach((d, i) => d.classList.toggle("active", i === current));
+      }
+
+      renderDots();
+      renderTestimonial();
+
+      /* Auto-rotate */
+      setInterval(() => {
+        current = (current + 1) % testimonials.length;
+        renderTestimonial();
+      }, 6500);
+
+      /* Footer-år
+         OBS: Den här raden kräver ett element med id="year" för att fungera */
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

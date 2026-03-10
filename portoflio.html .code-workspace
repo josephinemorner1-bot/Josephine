@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../hej123.html"
+		},
+		{
+			"path": "../portoflio.html  (kopia)"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "portoflio.html "
+	}
+}
